@@ -10,6 +10,11 @@ import {
     reactjs,
     redux,
     tailwind,
+    c,
+    cpp,
+    python,
+    firebase,
+    mysql,
     nodejs,
     mongodb,
     git,
@@ -17,12 +22,21 @@ import {
     docker,
     meta,
     starbucks,
+    iema,
     tesla,
     shopify,
     carrent,
     jobit,
     tripguide,
     threejs,
+    be_consistent,
+    pizza,
+    simon,
+    aarambh,
+    blog,
+    todolist,
+    portfolio,
+
   } from "../assets";
   
   export const navLinks = [
@@ -42,17 +56,23 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
-      icon: web,
+      title: "Problem Solving",
+      icon: creator,
+    },
+    {
+      title: "Frontend Developer",
+      icon: reactjs,
+
     },
     {
       title: "Backend Developer",
       icon: backend,
     },
     {
-      title: "Content Creator",
-      icon: creator,
+      title: "Full Stack Web Developer",
+      icon: web,
     },
+  
   ];
   
   const technologies = [
@@ -69,17 +89,10 @@ import {
       icon: javascript,
     },
     {
-      name: "TypeScript",
-      icon: typescript,
-    },
-    {
       name: "React JS",
       icon: reactjs,
     },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
+   
     {
       name: "Tailwind CSS",
       icon: tailwind,
@@ -104,32 +117,43 @@ import {
       name: "figma",
       icon: figma,
     },
+   {
+     name: "MYSQl",
+     icon: mysql,
+
+   },
+  
     {
-      name: "docker",
-      icon: docker,
+      name: "C++",
+      icon:cpp,
     },
+    
+    {
+      name: "Firebase",
+      icon:firebase,
+    },
+    
+    
   ];
   
   const experiences = [
     {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
+      title: "Web Developer",
+      company_name: "IEMA Research & Development Private Limited",
+      icon: iema,
       iconBg: "#383E56",
-      date: "March 2020 - April 2021",
+      date: "August 2023 -  Present",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "During my internship at IEMA, I've been actively contributing to the NCETL project. I specialize in React.js for crafting dynamic dashboards using Recharts and collaborate with Talend for ETL processes, ensuring efficient data extraction, transformation, and loading. This experience enhances my skills in both front-end development and data management.",
+        "In parallel, I'm also engaged in the DAUS project, focused on developing a dynamic hospital management system. My role includes leveraging Firebase for real-time data management and using React.js to create an agile and responsive dashboard. This experience reinforces my proficiency in web application development and data-driven solutions."
       ],
     },
     // {
-    //   title: "React Native Developer",
-    //   company_name: "Tesla",
-    //   icon: tesla,
-    //   iconBg: "#E6DEDD",
-    //   date: "Jan 2021 - Feb 2022",
+    //   title: "Full Stack Developer",
+    //   company_name: "Future Gurukuls",
+    //   icon: shopify,
+    //   iconBg: "#383E56",
+    //   date: "Jan 2022 - Jan 2023",
     //   points: [
     //     "Developing and maintaining web applications using React.js and other related technologies.",
     //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -137,73 +161,48 @@ import {
     //     "Participating in code reviews and providing constructive feedback to other developers.",
     //   ],
     // },
-    {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
-      iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Full stack Developer",
-      company_name: "Meta",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
   ];
   
   const testimonials = [
     {
       testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
+        "I thought Shivanshu is exceptional web developer, transformed our online presence, innovative solutions, highly recommend for web projects!",
+      name: "Abhishek Mishra",
+      designation: "CEO",
+      company: "Future Gurukuls",
+      image: "https://scontent.fccu3-1.fna.fbcdn.net/v/t39.30808-6/328580282_1145081989489748_1696133815309809344_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=xyiRlqU7kR0AX-5ioOr&_nc_ht=scontent.fccu3-1.fna&oh=00_AfANmQ9DIIjZPjXk_j133JEZG_sg31_H4H4ApZodGbUaOg&oe=651C58AD",
     },
     {
       testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
+        "Delivered outstanding results, highly skilled, exceeded expectations, reliable, great communicator, innovative solutions.",
+      name: "Rishit chakraborty",
+      designation: "Software Developer",
+      company: "IEMA Research & Development",
+      image: "https://media.licdn.com/dms/image/D5603AQHZIO_B1_JcDw/profile-displayphoto-shrink_800_800/0/1690710957417?e=1701302400&v=beta&t=KBuSCRxWsmIPIUR33m2fpbwmTRbzwZWFsNqfvfX-E8s",
     },
     {
       testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
+        "Exceptional web development skills, exceeded expectations, reliable, creative, problem solver, highly recommend, responsive communication.",
+      name: "Avinash Mishra",
       designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
+      company: "Future Gurululs",
+      image: "https://scontent.fccu3-1.fna.fbcdn.net/v/t39.30808-6/370629867_2181877248673659_7479671336952899959_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5614bc&_nc_ohc=_BR11vtvwVAAX_Gdl0Z&_nc_ht=scontent.fccu3-1.fna&oh=00_AfAEzaWox8JjdrptVpVGJQ7S0h1hBpC-4mlSUlDr_P3LNg&oe=651DF03E",
     },
+    
   ];
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Contest Reminder",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "I've developed a React-based web application that centralizes information on upcoming coding contests across platforms like CodeChef, Codeforces, LeetCode, GeeksforGeeks, etc. This project showcases my skills in web development, API integration, and data presentation, making it easier for enthusiasts to stay updated on competitive programming events.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "api",
           color: "green-text-gradient",
         },
         {
@@ -211,51 +210,145 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      image: be_consistent,
+      source_code_link: "https://github.com/Shivanshumishra23/be-consistent",
+      live_link:"https://bee-consistent.netlify.app/"
+      
     },
     {
-      name: "Job IT",
+      name: "Real time Pizza ",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "I've crafted a real-time pizza delivery web app featuring robust user authentication. Developed with HTML, CSS, JS, Node.js, Express.js, and MongoDB, it empowers customers to place orders seamlessly, notifying admins instantly. The dynamic pizza tracking feature adds to the user experience, reflecting my expertise in full-stack web development and user-driven solutions.",
+      tags: [
+        {
+          name: "node.js",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "express",
+          color: "green-text-gradient",
+        },
+        {
+          name: "mongodb",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: pizza,
+      source_code_link: "https://github.com/Shivanshumishra23/Real-time-pizza",
+      live_link: "https://github.com/Shivanshumishra23/Real-time-pizza",
+    },
+    {
+      name: "My Portfolio",
+      description:
+         "I've designed an engaging portfolio website, combining React and Three.js for stunning 3D animations. Beyond showcasing my creative work, it exemplifies my expertise in web development and interactive design. This immersive platform reflects a commitment to innovation and the seamless integration of cutting-edge technologies.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
+          name: "3js",
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "aos",
           color: "pink-text-gradient",
         },
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+      image: portfolio,
+      source_code_link: "https://github.com/Shivanshumishra23/My-Portfolio",
+      live_link: "https://github.com/Shivanshumishra23/My-Portfolio",
     },
     {
-      name: "Trip Guide",
+      name: "Post Your Blogs",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "I've developed a dynamic blog website using HTML, CSS, and JavaScript, powered by Node.js and Express for the backend and MongoDB for data storage. Explore my coding skills in action!",
       tags: [
         {
-          name: "nextjs",
+          name: "monogodb",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "nodejs",
           color: "green-text-gradient",
         },
         {
-          name: "css",
+          name: "expresjs",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: blog,
+      source_code_link: "https://github.com/Shivanshumishra23/Blog-website",
+      live_link: "https://blog-with-shivanshu.onrender.com/",
     },
+    {
+      name: "Simon Game",
+      description:
+        "The Simon game is the exciting electronic game of lights and sounds in which players must repeat random sequences of lights by pressing the colored pads in the correct order. It's fast-paced play, with lights and sounds that can challenge you.",
+      tags: [
+        {
+          name: "html",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "css",
+          color: "green-text-gradient",
+        },
+        {
+          name: "javascript",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: simon,
+      source_code_link: "https://github.com/Shivanshumishra23/Simon-Game/",
+      live_link: "https://shivanshumishra23.github.io/Simon-Game/",
+    },
+    {
+      name: "Aarambh Edutech",
+      description:
+        "Developed a dynamic website for Aarambh Edutech using React, offering an engaging user experience. Demonstrates my proficiency in web development and commitment to delivering effective digital solutions.",
+      tags: [
+        {
+          name: "reactjs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "css",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: aarambh,
+      source_code_link: "https://aarambh-edutech.netlify.app/",
+      live_link: "https://aarambh-edutech.netlify.app/",
+    },
+
+    {
+      name: "Todo List",
+      description:
+        "In my portfolio, I showcase my TodoList app, a dynamic web application built with MongoDB, Node.js, HTML, CSS, and JavaScript. It demonstrates my proficiency in full-stack development, database integration, and front-end design.",
+      tags: [
+        {
+          name: "mongodb",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "nodejs",
+          color: "green-text-gradient",
+        },
+        {
+          name: "express",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: todolist,
+      source_code_link: "https://github.com/Shivanshumishra23/TodoList",
+      live_link: "https://todolist-bm2b.onrender.com/",
+    },
+
   ];
   
   export { services, technologies, experiences, testimonials, projects };

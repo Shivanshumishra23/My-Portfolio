@@ -8,128 +8,84 @@ import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
 const Contact = () => {
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
+  
+  const [username, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [btn_text, setBtnText] = useState("Send Message");
   const [loading, setLoading] = useState(false);
+  const form = useRef();
 
-  const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
-
-//template_9tae1nl
-// service_xfw7dpd
-// HKKVNYI8irF6lPpju
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  async function submitHandler(event) {
+    let result;
+    event.preventDefault();
+    setBtnText(" Sending");
     setLoading(true);
+    try {
+      result = await emailjs.sendForm('service_s9rog6w', 'template_i4pog28', form.current, 'LEbtOV3d7OjrlmzsO');
+      console.log(result);
+    }
+    catch (error) {
+      console.log(error.text);
+    }
+    finally {
+      setEmail(""); setMessage(""); setName(""); setSubject("");
+      setBtnText("Send Message");
+      setLoading(false);
+    }
 
-    emailjs
-      .send(
-        service_xfw7dpd,
-        template_9tae1nl,
-        {
-          from_name: form.name,
-          to_name: "Shivanshu mishra",
-          from_email: form.email,
-          to_email: "mishrashivanshu2004@gmail.com",
-          message: form.message,
-        },
-        HKKVNYI8irF6lPpju
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+  }
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          alert("Ahh, something went wrong. Please try again.");
-          console.error(error);
 
-         
-        }
-      );
-  };
 
   return (
     <div
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
       <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
+        variants={slideIn( "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
-        >
+        <form  ref={form} className='mt-12 flex flex-col gap-8' onSubmit={submitHandler}>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Name</span>
-            <input
-              type='text'
-              name='name'
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
-            <input
-              type='email'
-              name='email'
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
-            <textarea
-              rows={7}
-              name='message'
-              value={form.message}
-              onChange={handleChange}
-              placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
+            <input name="username" onChange={(event) => setName(event.target.value)} value={username} autoComplete="off" type="text" id="name" className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium' placeholder="What's your good name?" required />
           </label>
 
-          <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
+          <label className='flex flex-col'>
+            <span className='text-white font-medium mb-4'>Your email</span>
+            <input name="email" onChange={(event) => setEmail(event.target.value)} value={email} autoComplete="off" required type="email" id="email"   className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium' placeholder="What's your web address" /> 
+          </label>
+
+          <label className='flex flex-col'>
+            <span className='text-white font-medium mb-4'>Subject</span>
+            <input name="subject" onChange={(event) => setSubject(event.target.value)} value={subject} autoComplete="off" type="text" id="subject" className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium' placeholder="Let us know how we can help you" required />
+           
+          </label>
+
+      
+
+          <label className='flex flex-col'>
+            <span className='text-white font-medium mb-4'>Your Message</span>
+            <textarea name="message" onChange={(event) => setMessage(event.target.value)} value={message} autoComplete="off" id="message" rows="4" className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium' placeholder="What you want to say?" required></textarea>
+        
+          </label>
+       
+          <div>
+            <button disabled={loading} type="submit" className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-[#0DDB94] sm:w-fit "><i className={`${(loading) ? 'fa fa-spinner fa-spin' : ''}`}></i>{btn_text}</button>
+          </div>
+
         </form>
+
+
       </motion.div>
 
       <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
+        variants={slideIn("tween", 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
         <EarthCanvas />

@@ -20,6 +20,11 @@ const Hero = () => {
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className='text-[#915EFF]'>
+            Shivanshu 
+              </span>
+          </h1>
+          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          I am <span className='text-[#915EFF]'>
             <Typewriter
             loop
             cursor
@@ -27,17 +32,14 @@ const Hero = () => {
             typeSpeed={70}
             deleteSpeed={50}
             delaySpeed={1000}
-            words={['Shivanshu', 'Coder','developer']}
+            words={['Full Stack Developer', 'Backend Developer','React Developer']}
             onLoop={(loopCount) =>
               console.log(`Just completed loop ${loopCount}`)
             }
           />
-              </span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
+              </span><br/> And Here is My Portfolio .
           </p>
+         
         </div>
       </div>
       <ComputersCanvas/>

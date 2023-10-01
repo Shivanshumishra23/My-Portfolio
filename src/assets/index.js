@@ -18,17 +18,35 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
+import c from "./tech/c.png";
+import cpp from "./tech/cpp.png";
+import python from "./tech/python.png";
+import firebase from "./tech/firebase.png";
+import mysql from "./tech/mysql.png";
+
+
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-
+import iema from "./company/iema.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import be_consistent from "./be_consistent.png";
+import eye from "./eye.png";
+import pizza from "./pizza.png";
+import simon from "./simon.png";
+import blog from "./blog.png";
+import aarambh from "./aarambh.png";
+import portfolio from "./portfolio.png";
+import todolist from "./todolist.png";
+
+
 
 export {
   logo,
@@ -50,8 +68,14 @@ export {
   reactjs,
   redux,
   tailwind,
+  c,
+  cpp,
+  python,
+  firebase,
+  mysql,
   typescript,
   threejs,
+  iema,
   meta,
   shopify,
   starbucks,
@@ -59,4 +83,12 @@ export {
   carrent,
   jobit,
   tripguide,
+  be_consistent,
+  simon,
+  eye,
+  pizza,
+  aarambh,
+  blog,
+  portfolio,
+  todolist,
 };
