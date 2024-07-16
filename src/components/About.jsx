@@ -8,9 +8,9 @@ import { Tilt } from 'react-tilt'
 import { SectionWrapper } from '../hoc'
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
-    <motion.div
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+  <div className='xs:w-[250px] w-full'>
+    <div
+      
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
     >
       <div
@@ -31,8 +31,8 @@ const ServiceCard = ({ index, title, icon }) => (
           {title}
         </h3>
       </div>
-    </motion.div>
-  </Tilt>
+    </div>
+  </div>
 );
 
 
@@ -41,17 +41,17 @@ const ServiceCard = ({ index, title, icon }) => (
 const About = () => {
   return (
     <>
-  <motion.div variants={textVariant()}>
+  <div>
     <p className={styles.sectionSubText} >Introduction</p>
     <h2 className={styles.sectionHeadText}>Overview</h2>
 
-  </motion.div>
+  </div>
 
-<motion.p variants={fadeIn("","",0.1,1)}
+<p 
  className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
 >
 I'm passionate problem solver and coding enthusiast and currently I'm  3rd-year BTech student with a strong foundation in programming languages such as JavaScript, C, C++, Python, and expertise in web development using Node.js, React.js, HTML, CSS, Bootstrap, and Tailwind CSS. My proficiency extends to database management with MongoDB, SQL, and MySQL, as well as Firebase integration. I am dedicated to creating dynamic and user-friendly web applications, reflecting my commitment to software development and problem-solving.
-</motion.p>
+</p>
 
 <div className='mt-20 flex flex-wrap gap-10 justify-center'>
         {services.map((service, index) => (
